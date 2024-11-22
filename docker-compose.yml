@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  postgres1:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=Auth
+      - POSTGRES_USER=miki
+      - POSTGRES_PASSWORD=1998
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
